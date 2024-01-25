@@ -1,0 +1,13 @@
+<!-- app/views/properties/index.html.erb -->
+
+<h1>Properties Listing</h1>
+
+<div class="properties-container">
+  <% @properties.each do |property| %>
+    <div class="property-card">
+        <h2><%= property.name %></h2>
+        <p><%= number_to_currency(property.price) %></p>
+        <%= link_to 'View Details', property_path(property), class: 'view-details-button' %>
+    </div>
+  <% end %>
+</div>
