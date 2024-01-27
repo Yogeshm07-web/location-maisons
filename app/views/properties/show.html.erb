@@ -1,0 +1,28 @@
+<h1>Property Details</h1>
+
+<div>
+  <strong>Name:</strong>
+  <%= @property.name %>
+</div>
+
+<div>
+  <strong>Description:</strong>
+  <%= @property.description %>
+</div>
+
+<div>
+  <strong>Price:</strong>
+  <%= number_to_currency(@property.price) %>
+</div>
+
+<div>
+  <strong>Maximum People:</strong>
+  <%= @property.max_people %>
+</div>
+
+<div>
+  <strong>Location:</strong>
+  <%= @property.location %>
+</div>
+
+<%= link_to 'Back to Properties', properties_path %>
