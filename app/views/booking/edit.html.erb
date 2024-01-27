@@ -1,0 +1,12 @@
+<%= form_with model: @booking do |f| %>
+  <%= f.label :property_id %>
+  <%= f.number_field :property_id %>
+  <%= f.label :total_price %>
+  <%= f.number_field :total_price %>
+  <%= f.label :start_time %>
+  <%= f.date_field :start_time %>
+  <%= f.label :end_time %>
+  <%= f.date_field :end_time %>
+  <%= f.submit %>
+<% end %>
+
