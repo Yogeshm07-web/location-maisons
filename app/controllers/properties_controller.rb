@@ -1,4 +1,5 @@
 class PropertiesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_property, only: [:show]
 
   def index

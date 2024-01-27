@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -11,7 +10,17 @@ Rails.application.routes.draw do
   # root "posts#index"
 
 
-  resources :booking
+  resources :properties do
+    resources :booking
+  end
 
-  resources :properties, only: [:index, :show]
+
+  devise_scope :user do
+    authenticated :user do
+      root "properties#index", as: :authenticated_root
+    end
+    unauthenticated do
+      root "pages#home", as: :unauthenticated_root
+    end
+  end
 end
