@@ -1,29 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    .container {
-
-     min-height: 100vh;
-     display: flex;
-     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    text-align: center;
-    }
-
     h1 {
-      color: #333;
+      color: #2c3e50; /* Dark gray color for the title */
+    }
+
+    body {
+      background-color: #ecf0f1; /* Light gray background color */
     }
 
     .row {
@@ -36,12 +23,13 @@
     .col-md-4 {
       flex: 0 0 33.33%;
       max-width: 33.33%;
-      padding: 10px;
+      padding: 15px;
       box-sizing: border-box;
+      margin-bottom: 20px;
     }
 
     .card {
-      border: 1px solid #ddd;
+      border: 1px solid #bdc3c7; /* Light gray border color */
       border-radius: 8px;
       overflow: hidden;
       transition: box-shadow 0.3s ease-in-out;
@@ -49,6 +37,7 @@
 
     .card:hover {
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      background-color: #3498db; /* Bright blue color on hover */
     }
 
     .card-img-top {
@@ -60,13 +49,15 @@
       padding: 15px;
     }
 
-    h5, p {
+    h5,
+    p {
       margin: 0;
+      color: #34495e; /* Dark blue-gray color for text */
     }
 
     .btn-primary {
-      background-color: #007bff;
-      color: #fff;
+      background-color: #3498db; /* Blue color for the button */
+      color: #2ecc71; /* Light green text color for the button */
       text-decoration: none;
       padding: 10px 15px;
       border-radius: 5px;
@@ -74,43 +65,42 @@
     }
 
     .btn-primary:hover {
-      background-color: #0056b3;
+      background-color: #2980b9; /* Darker blue color on hover */
     }
   </style>
   <title>Properties Listing</title>
 </head>
+
 <body>
 
-<div class="container mt-4 p-4">
-  <h1 class="text-center text-light">Properties Listing</h1>
-  <div class="row mt-4">
-    <% cloudinary_image_urls = [
-      { url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCsJORmeOeA7pY8nD_G-1JNVJsH23rX_qaIA&usqp=CAU', width: 150, height: 200 },
-      { url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6G5y1Eq77ukXCYSwXo2SxuurJv9G7jIW3Fg&usqp=CAU', width: 200, height: 150 },
-      { url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDwSkgOyqr1JbjrEo3FBKWDFisLLioF0VDNQ&usqp=CAU', width: 180, height: 180 },
-      { url: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/ef/85/68/palm-house-boutique-resort.jpg?w=700&h=-1&s=1', width: 250, height: 150 },
-      { url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_Q5Ce5I5MhTbpVTkhFt776UU9Z9WA8Cv6MQ&usqp=CAU', width: 180, height: 220 },
-      { url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYakEc9P9ZSVQKLq5FWjpfH7F_Wzkv07YkGzoD9XHqR7kRwpu4yTeuVTh8qhxsLNhWsaI&usqp=CAU', width: 220, height: 180 },
-      { url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7gG9-prpql_mEIXR_hizJBvJAHIuwwMGuWQ&usqp=CAU', width: 200, height: 200 },
-      { url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmw6WSms7vzRRngEuo-nZNkjTFv4pAgBaywA&usqp=CAU', width: 150, height: 180 }
-    ] %>
+  <div class="container mt-4 p-4">
+    <h1 class="text-center">Properties Listing</h1>
+    <div class="row mt-4">
+      <% properties_data = [
+        { name: 'Oceanfront Paradise', price: 100000, cloudinary_image_url: 'https://img.freepik.com/premium-photo/luxury-beach-house-with-swimming-pool-sun-lougers-sea-view-ai-generated-image_941600-13334.jpg'},
+        { name: 'Elegant Countryside Manor', price: 150000, cloudinary_image_url: 'https://img.jamesedition.com/listing_images/2023/09/26/19/23/10/cb957096-4fdd-4901-b54e-3373df75f2ef/je/507x312xc.jpg' },
+        { name: 'Tropical Retreat Villa', price: 120000, cloudinary_image_url: 'https://www.real-samui-properties.com/prodimages/180112-Villa-Oasis-5.jpg'},
+        { name: 'Luxurious Mountain View Mansion', price: 180000, cloudinary_image_url: 'https://img.jamesedition.com/listing_images/2024/01/19/17/37/27/26f88c43-6d07-44e5-be97-6c8427a7bb28/je/507x312xc.jpg' },
+        { name: 'Modern City Skyline Penthouse', price: 200000, cloudinary_image_url: 'https://img.jamesedition.com/listing_images/2024/01/04/12/21/58/a9bda321-bdd1-48c6-b0cd-c169c9c190dd/je/507x312xc.jpg' },
+        { name: 'Serene Lakeside Cottage', price: 160000, cloudinary_image_url: 'https://www.trulia.com/pictures/thumbs_5/zillowstatic/fp/0785863dec9b18f33da585151573efd6-full.jpg' },
+        { name: 'Architectural Marvel in Florida', price: 130000, cloudinary_image_url: 'https://luxury-houses.net/wp-content/uploads/2020/08/Unparalleled-Sabal-Palm-Modern-House-in-Florida-for-Sale-20-Million-4-768x497.jpg' },
+        { name: 'Sunset View Chalet', price: 170000, cloudinary_image_url: 'https://images.estately.net/35_RX-10731329_0_1635025785_636x435.jpg' },
+        { name: 'Charming Countryside Farmhouse', price: 140000, cloudinary_image_url: 'https://www.compass.com/m/0a9201c6fc596314e39cb5a76cdc7449bd40efb2_img_0_ec83d/640x480.jpg' }
+      ] %>
 
-    <% prices = [100000, 150000, 120000, 180000, 200000, 160000, 130000, 170000, 140000] %>
-
-    <% cloudinary_image_urls.each_with_index do |image_data, index| %>
-      <div class="col-md-4 mb-4">
-        <div class="card h-100">
-          <%= image_tag image_data[:url], class: 'card-img-top img-fluid', alt: 'House Exterior Image', width: image_data[:width], height: image_data[:height] %>
-          <div class="card-body text-center">
-            <h5 class="card-title text-light">Property <%= index + 1 %></h5>
-            <p class="card-text text-light"><strong>Price:</strong> <%= number_to_currency(prices[index]) %></p>
-            <%= link_to 'View Details', property_path(index + 1), class: 'btn btn-primary mt-2' %>
+      <% properties_data.each_with_index do |property, index| %>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <%= image_tag property[:cloudinary_image_url], class: 'card-img-top img-fluid', alt: "Property #{index + 1} Image" %>
+            <div class="card-body text-center">
+              <h5 class="card-title"><%= property[:name] %></h5>
+              <%= link_to 'View Details', property_path(index + 1), class: 'btn btn-primary mt-2' %>
+            </div>
           </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
-</div>
 
 </body>
 </html>
