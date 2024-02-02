@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get 'home', to: 'pages#home', as: 'home'
 
   resources :properties do
-    resources :booking
+    resources :bookings
   end
 
 
