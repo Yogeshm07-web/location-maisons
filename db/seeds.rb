@@ -20,15 +20,15 @@ user10 = User.create!(email: 'user10@example.com', password: '123456', first_nam
 # ...
 
 properties_data = [
-  { name: 'Property 1', price: 100000, cloudinary_image_url: 'https://res.cloudinary.com/your-cloud-name/image/upload/v1234567890/house-exterior1.jpg', user: user1 },
-  { name: 'Property 2', price: 150000, cloudinary_image_url: 'https://res.cloudinary.com/your-cloud-name/image/upload/v1234567890/house-exterior2.jpg', user: user2 },
-  { name: 'Property 3', price: 120000, cloudinary_image_url: 'https://res.cloudinary.com/your-cloud-name/image/upload/v1234567890/house-exterior3.jpg', user: user3 },
-  { name: 'Property 4', price: 180000, cloudinary_image_url: 'https://res.cloudinary.com/your-cloud-name/image/upload/v1234567890/house-exterior4.jpg', user: user4 },
-  { name: 'Property 5', price: 200000, cloudinary_image_url: 'https://res.cloudinary.com/your-cloud-name/image/upload/v1234567890/house-exterior5.jpg', user: user5 },
-  { name: 'Property 6', price: 160000, cloudinary_image_url: 'https://res.cloudinary.com/your-cloud-name/image/upload/v1234567890/house-exterior6.jpg', user: user6 },
-  { name: 'Property 7', price: 130000, cloudinary_image_url: 'https://res.cloudinary.com/your-cloud-name/image/upload/v1234567890/house-exterior7.jpg', user: user7 },
-  { name: 'Property 8', price: 170000, cloudinary_image_url: 'https://res.cloudinary.com/your-cloud-name/image/upload/v1234567890/house-exterior8.jpg', user: user8 },
-  { name: 'Property 9', price: 140000, cloudinary_image_url: 'https://res.cloudinary.com/your-cloud-name/image/upload/v1234567890/house-exterior9.jpg', user: user9 }
+  { name: 'Oceanfront Paradis', price: 1000, cloudinary_image_url: 'https://t4.ftcdn.net/jpg/03/70/64/43/360_F_370644357_MDF4UXLAXTyyi2OyuK66tWW9cA2f8svL.jpg', user: user1 },
+  { name: 'Elegant Countryside Manor', price: 1500, cloudinary_image_url: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', user: user2 },
+  { name: 'Tropical Retreat Villa', price: 1200, cloudinary_image_url: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=500&auto=format&fit=cro[…]3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGhvdXNlfGVufDB8fDB8fHww', user: user3 },
+  { name: 'Luxurious Mountain View Mansion', price: 1800, cloudinary_image_url: 'https://images.unsplash.com/photo-1582610116397-edb318620f90?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHZpbGxhc3xlbnwwfHwwfHx8MA%3D%3D', user: user4 },
+  { name: 'Charming Countryside', price: 2000, cloudinary_image_url: 'https://images.unsplash.com/photo-1571635685743-db0db8e31d9a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHZpbGxhc3xlbnwwfHwwfHx8MA%3D%3D', user: user5 },
+  { name: 'Modern City Skyline Penthouse', price: 1600, cloudinary_image_url: 'https://images.unsplash.com/photo-1603382401636-c352fb5755ec?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fHZpbGxhc3xlbnwwfHwwfHx8MA%3D%3D', user: user6 },
+  { name: 'Serene Lakeside Cottage', price: 1300, cloudinary_image_url: 'https://images.unsplash.com/photo-1594368381738-a9e6b8ffb609?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fHZpbGxhc3xlbnwwfHwwfHx8MA%3D%3D', user: user7 },
+  { name: 'Architectural Marvel in Florida', price: 1700, cloudinary_image_url: 'https://images.unsplash.com/photo-1603822455719-861b5afe1c50?w=500&auto=format&fit=cro[…]3wxMjA3fDB8MHxzZWFyY2h8MzV8fHZpbGxhc3xlbnwwfHwwfHx8MA%3D%3D', user: user8 },
+  { name: 'Sunset View Chalet', price: 1400, cloudinary_image_url: 'https://images.unsplash.com/photo-1598228723793-52759bba239c?w=500&auto=format&fit=cro[…]3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGhvdXNlfGVufDB8fDB8fHww', user: user9 }
   # Add more properties with Cloudinary image URLs as needed
 ]
 
