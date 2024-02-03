@@ -11,10 +11,9 @@ Rails.application.routes.draw do
   get 'home', to: 'pages#home', as: 'home'
 
   resources :properties do
-    resources :bookings
+    resources :bookings, except: :index
   end
-
-
+  get 'booking', to: 'bookings#ryan', as: 'ryan'
   devise_scope :user do
     authenticated :user do
       root "properties#index", as: :authenticated_root
