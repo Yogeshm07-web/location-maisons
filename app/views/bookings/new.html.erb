@@ -1,7 +1,5 @@
-<%= simple_form_for @booking do |f| %>
-  <%= f.input :property_id %>
+<%= simple_form_for [@property,@booking] do |f| %>
   <%= f.input :start_time,:as => :date %>
   <%= f.input :end_time,:as => :date %>
-  <%= f.input :price %>
   <%= f.button :submit %>
 <% end %>
