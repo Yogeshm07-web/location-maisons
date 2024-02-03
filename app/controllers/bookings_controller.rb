@@ -4,6 +4,7 @@ class BookingsController < ApplicationController
     before_action :set_property, only: [:new, :create]
 
     def new
+
       @booking = Booking.new
     end
 
@@ -11,6 +12,7 @@ class BookingsController < ApplicationController
       @booking = Booking.new(booking_params)
       @booking.property = @property
       @booking.user = current_user
+      @booking.total_price = @property.price*10
       if @booking.save
         redirect_to property_path(@property)
       else
