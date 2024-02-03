@@ -1,0 +1,52 @@
+// Base layout styles
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+h1 {
+  color: #007bff;
+  font-size: 24px;
+}
+
+// Styles for property details
+.property-details {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  div {
+    margin-bottom: 10px;
+  }
+
+  strong {
+    color: #333;
+    font-weight: bold;
+  }
+}
+
+// Button styles
+.book-button {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-right: 10px;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+// Adjust spacing and alignment
+div {
+  margin-bottom: 1rem;
+}
