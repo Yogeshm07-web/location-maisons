@@ -12,8 +12,9 @@ class BookingsController < ApplicationController
       @booking = Booking.new(booking_params)
       @booking.property = @property
       @booking.user = current_user
-      datediff = @booking.end_time - @booking.start_time
+      datediff = (@booking.end_time.to_date - @booking.start_time.to_date).to_i
       @booking.total_price = @property.price*datediff
+      
       if @booking.save
         redirect_to ryan_path
       else
