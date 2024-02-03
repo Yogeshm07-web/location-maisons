@@ -12,9 +12,10 @@ class BookingsController < ApplicationController
       @booking = Booking.new(booking_params)
       @booking.property = @property
       @booking.user = current_user
-      @booking.total_price = @property.price*10
+      datediff = @booking.end_time - @booking.start_time
+      @booking.total_price = @property.price*datediff
       if @booking.save
-        redirect_to property_path(@property)
+        redirect_to ryan_path
       else
         render :new, status: :unprocessable_entity
       end
@@ -26,6 +27,10 @@ class BookingsController < ApplicationController
     def destroy
       @booking.destroy
       redirect_to bookings_url, notice: 'Booking was successfully destroyed.'
+    end
+
+    def ryan
+      @showB = Booking.where(user:current_user)
     end
     private
       def set_property

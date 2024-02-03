@@ -1,0 +1,22 @@
+<h1>Booking Details</h1>
+<% @showB.each do |booking| %>
+<h1>----------------------------<h1>
+<div>
+  <strong>Initial date:</strong>
+  <%= booking.start_time %>
+</div>
+<div>
+  <strong>End:</strong>
+  <%= booking.end_time %>
+</div>
+<div>
+  <strong>Number of days:</strong>
+  <%= booking.end_time - booking.start_time %>
+</div>
+<div>
+  <strong>Price:</strong>
+  <%= booking.total_price %>
+</div>
+
+<%= link_to 'Payment Method',class: 'book-button' %>
+<%end%>
